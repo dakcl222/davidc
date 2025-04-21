@@ -60,16 +60,25 @@
 #     print("Usted es un adulto mayor")
 
 
-#Ingresar 3 numeros y mostrar el mayor de los 3 
+# #Ingresar 3 numeros y mostrar el mayor de los 3 
 
-n1=int(input("Ingrese el primer numero: "))
-n2=int(input("Ingrese el segundo numero: "))
-n3=int(input("Ingrese el tercer numero: "))
+# n1=int(input("Ingrese el primer numero: "))
+# n2=int(input("Ingrese el segundo numero: "))
+# n3=int(input("Ingrese el tercer numero: "))
 
-if n1>n2 and n1>n3:
-    print("El numero mayor es: ", n1)
-elif n2>n1 and n2>n3:
-    print("El numero mayor es: ", n2)
-elif n3>n1 and n3>n2:
-    print("El numero mayor es: ", n3)
+# if n1>n2 and n1>n3:
+#     print("El numero mayor es: ", n1)
+# elif n2>n1 and n2>n3:
+#     print("El numero mayor es: ", n2)
+# elif n3>n1 and n3>n2:
+#     print("El numero mayor es: ", n3)
     
+pw=2233
+print("Ingrese su clave")
+clave=int(input())
+
+if clave==pw:
+    print("Pasa")
+else:
+    print("No pasa")
+
