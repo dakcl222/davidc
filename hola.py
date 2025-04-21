@@ -73,12 +73,20 @@
 # elif n3>n1 and n3>n2:
 #     print("El numero mayor es: ", n3)
     
-pw=2233
-print("Ingrese su clave")
-clave=int(input())
+# pw=2233
+# print("Ingrese su clave")
+# clave=int(input())
 
-if clave==pw:
-    print("Pasa")
-else:
-    print("No pasa")
+# if clave==pw:
+#     print("Pasa")
+# else:
+#     print("No pasa")
 
+# #par impar
+
+# num=int(input("INgrese un numero "))
+
+# if num % 2==0:
+#     print("el numero: ", num, " Es par")
+# else:
+#     print("el numero: ", num, " Es impar")

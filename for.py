@@ -33,19 +33,64 @@
 # print("el promedio es: ", prom)
     
 
-#pide la cantidad de alummnos y luego la cantidad de notas por alumnos 
-#muestra el promedio de cada uno
+# #pide la cantidad de alummnos y luego la cantidad de notas por alumnos 
+# #muestra el promedio de cada uno
 
-cantalumn=int(input("Ingrese la cantidad de alumnos: "))
+# cantalumn=int(input("Ingrese la cantidad de alumnos: "))
 
-for i in range(cantalumn):
-    print("Ingrese la cantidad de notas del alumno: ", i+1)
-    cantnotas=int(input())
-    suma=0
-    for j in range(cantnotas):
-        print("ingrese nota: ", i+1)
-        nota=float(input())
-        suma+=nota
-        prom=suma/cantnotas
-        print("El promedio es: ", prom)
+# for i in range(cantalumn):
+#     print("Ingrese la cantidad de notas del alumno: ", i+1)
+#     cantnotas=int(input())
+#     suma=0
+#     for j in range(cantnotas):
+#         print("ingrese nota: ", i+1)
+#         nota=float(input())
+#         suma+=nota
+#         prom=suma/cantnotas
+#         print("El promedio es: ", prom)
 
+# #pide un nmero y suma todos los digitos desd el 1 hasta ese numero mostrando la suma
+
+# num=int(input("Ingrese un numero: "))
+# suma=0
+# for i in range(num):
+#     suma+=i+1
+# print("La suma de los numeros es: ", suma)
+
+# #pedir la cantidad de nuemeros y verifique cada uno si es par o impar
+
+# #par impar
+# cantnum=int(input("Ingrese la cantidad de numeros "))
+
+# for i in range(cantnum):
+#     print("Ingrese un numero: ")
+#     num=int(input())
+#     if num % 2==0:
+#         print("el numero: ", num, " Es par")
+#     else:
+#         print("el numero: ", num, " Es impar")
+
+#2 candidatos, pedir cantidad de votantes y mostrar el resultado
+
+nvotantes=int(input("Ingrese el numero de votantes: "))
+
+v1=0
+v2=0
+
+for i in range(nvotantes):
+    voto=int(input("Ingrese su voto 1 o 2: "))
+    if voto==1:
+        v1=v1+1
+    elif voto==2:
+        v2=v2+1
+    else:
+        print("Ingrese un voto valido")
+
+print("Los votos de v1 Son: ", v1)
+print("Los votos de v2 son: ", v2)
+
+if v1>v2:
+    print("gano v1")
+else:
+    print("gano v2")
+    
