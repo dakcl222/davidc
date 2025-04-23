@@ -3,6 +3,8 @@
 
 
 # print("hola ", nombre, "su edad es", edad)
+# print(f"hola (nombre) y su edad es (nombre)")
+
 
 # #Solicitud de datos
 # print("ingrese su nombre")
@@ -90,3 +92,27 @@
 #     print("el numero: ", num, " Es par")
 # else:
 #     print("el numero: ", num, " Es impar")
+
+# cant=int(input("Ingrese la cantidad de numeros: "))
+# cont=0
+# cont2=0
+# for i in range(cant):
+#     num=int(input("Ingrese un numero: "))
+#     if num % 2==0:
+#         print("el numero es par")
+#         cont=cont+1
+#     else:
+#         print("el numero es impar")
+#         cont2=cont2+1
+
+
+# print("La cantidad de numeros pares son: ", cont)
+# print("La cantidad de numeros impares son: ", cont2)
+
+## terminar
+# num=int(input("Ingrese un numero"))
+# for i in range(num):
+#     if (i+1) % 2==0:
+#         print("El numero ", i, " es par" )
+#     else:
+#         print("El numero ", i, " es impar" )

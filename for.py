@@ -70,27 +70,72 @@
 #     else:
 #         print("el numero: ", num, " Es impar")
 
-#2 candidatos, pedir cantidad de votantes y mostrar el resultado
+# #2 candidatos, pedir cantidad de votantes y mostrar el resultado
 
-nvotantes=int(input("Ingrese el numero de votantes: "))
+# nvotantes=int(input("Ingrese el numero de votantes: "))
 
-v1=0
-v2=0
+# v1=0
+# v2=0
 
-for i in range(nvotantes):
-    voto=int(input("Ingrese su voto 1 o 2: "))
-    if voto==1:
-        v1=v1+1
-    elif voto==2:
-        v2=v2+1
-    else:
-        print("Ingrese un voto valido")
+# for i in range(nvotantes):
+#     voto=int(input("Ingrese su voto 1 o 2: "))
+#     if voto==1:
+#         v1=v1+1
+#     elif voto==2:
+#         v2=v2+1
+#     else:
+#         print("Ingrese un voto valido")
 
-print("Los votos de v1 Son: ", v1)
-print("Los votos de v2 son: ", v2)
+# print("Los votos de v1 Son: ", v1)
+# print("Los votos de v2 son: ", v2)
 
-if v1>v2:
-    print("gano v1")
-else:
-    print("gano v2")
-    
+# if v1>v2:
+#     print("gano v1")
+# elif v1==v2:
+#     print("Empate")
+# else:
+#     print("gano v2")
+
+# pa=str(input())
+# cont=0
+# c=0
+# cons=0
+# for i in pa:
+#     print(i)
+#     c=c+1
+#     if i.lower() in "aeiou":
+#         cont=cont+1
+#     elif i.lower() in " ":
+#         cons=cons-1
+#         c=c-1
+#     else:
+#         cons=cons+1
+
+# print("La cantidad de vocales es: ", cont)
+# print("La cantidad de caracteres es: ", c)
+# print("La cantidad de consonantes es: ", cons)
+
+# #supermercado
+# cant=int(input("Ingrese la cantidad de productos: "))
+# total=0
+
+# for i in range(cant):
+#     print("Que productos llevara?")
+#     print("1.- Diazepam $9000")
+#     print("2.- Metametozona $18500")
+#     print("3.- Oblea china $1000")
+#     op=int(input())
+#     if op==1:
+#         print("Usted lleva Diazepam")
+#         total=total+9000
+#     elif op==2:
+#         print("Usted lleva Metametozona")
+#         total=total
+#     elif op==3:
+#         print("Usted lleva Oblea china")
+#         total=total+1000
+#     else:
+#         print("hola")
+
+# print("El total neto es:", total)
+# print("El total mas IVA es: ", total*1.19)
