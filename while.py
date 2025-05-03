@@ -175,7 +175,7 @@
 # # basados en las respuestas del usuario y en
 # # la informaicon dada, calcular su descuento
 
-##terminar XDDDDDDDDDDDDDD
+# #terminar XDDDDDDDDDDDDDD
 
 
 # descuento=1
@@ -198,62 +198,62 @@
 # elif personas>=5:
 #     descuento=descuento-0.04
 
-# print(f"El total a pagar es: {arancel*descuento}")
+# print(f"El total a pagar es:", round(arancel*descuento,1))
 
 
-#Clasificar segun categoria y precio
-# Cat 1 +200, Cat 2 +400, Cat 3 +600
-#Precios : 1000 y menos 3%, entre 1001 y 5000 5%, 5001 y mas 6%
-#Poner listado de 3 productos por categoria, las cat son 1 2 y 3
-#Agregar los impuests al precio, segun la cat y luego
-#aplicar descuentos al total de la boleta segun el monto
-descuento=0
-total=0
+# #Clasificar segun categoria y precio
+# # Cat 1 +200, Cat 2 +400, Cat 3 +600
+# #Precios : 1000 y menos 3%, entre 1001 y 5000 5%, 5001 y mas 6%
+# #Poner listado de 3 productos por categoria, las cat son 1 2 y 3
+# #Agregar los impuests al precio, segun la cat y luego
+# #aplicar descuentos al total de la boleta segun el monto
+# descuento=0
+# total=0
 
-cat=int(input("Ingrese la categoria 1,2,3: "))
-if cat==1:
-    print("Categoria 1: ")
-    print("Producto 1: cat1, 1000 +200")
-    print("Producto 2: cat1, 2500 +200")
-    print("Producto 3: cat1, 3500 +200")
-    op=int(input("Ingrese la opcion"))
-    if op==1:
-        total=total+1000+200
-    elif op==2:
-        total=total+2500+200
-    elif op==3:
-        total=total+3500+200
-elif cat==2:
-    print("Categoria 2: ")
-    print("Producto 4: cat1, 1000 +400")
-    print("Producto 5: cat1, 2500 +400")
-    print("Producto 6: cat1, 3500 +400")
-    op=int(input("Ingrese la opcion"))
-    if op==1:
-        total=total+1000+400
-    elif op==2:
-        total=total+2500+400
-    elif op==3:
-        total=total+3500+400
-elif cat==3:
-    print("Categoria 3: ")
-    print("Producto 7: cat3, 1000 +600")
-    print("Producto 8: cat3, 2500 +600")
-    print("Producto 9: cat3, 3500 +600")
-    op=int(input("Ingrese la opcion"))
-    if op==1:
-        total=total+1000+600
-    elif op==2:
-        total=total+2500+600
-    elif op==3:
-        total=total+3500+600
+# cat=int(input("Ingrese la categoria 1,2,3: "))
+# if cat==1:
+#     print("Categoria 1: ")
+#     print("Producto 1: cat1, 1000 +200")
+#     print("Producto 2: cat1, 2500 +200")
+#     print("Producto 3: cat1, 3500 +200")
+#     op=int(input("Ingrese la opcion"))
+#     if op==1:
+#         total=total+1000+200
+#     elif op==2:
+#         total=total+2500+200
+#     elif op==3:
+#         total=total+3500+200
+# elif cat==2:
+#     print("Categoria 2: ")
+#     print("Producto 4: cat1, 1000 +400")
+#     print("Producto 5: cat1, 2500 +400")
+#     print("Producto 6: cat1, 3500 +400")
+#     op=int(input("Ingrese la opcion"))
+#     if op==1:
+#         total=total+1000+400
+#     elif op==2:
+#         total=total+2500+400
+#     elif op==3:
+#         total=total+3500+400
+# elif cat==3:
+#     print("Categoria 3: ")
+#     print("Producto 7: cat3, 1000 +600")
+#     print("Producto 8: cat3, 2500 +600")
+#     print("Producto 9: cat3, 3500 +600")
+#     op=int(input("Ingrese la opcion"))
+#     if op==1:
+#         total=total+1000+600
+#     elif op==2:
+#         total=total+2500+600
+#     elif op==3:
+#         total=total+3500+600
 
-if total<=1000:
-    total=total*0.97
-elif total<=1001 and total>=500:
-    total=total*0.95
-elif total<=5001:
-    total=total*0.94
+# if total<=1000:
+#     total=total*0.97
+# elif total<=1001 and total>=500:
+#     total=total*0.95
+# elif total<=5001:
+#     total=total*0.94
 
-print(f"el total es:{total} ")
+# print(f"el total es:{total} ")
 
