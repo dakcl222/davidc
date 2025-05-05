@@ -257,3 +257,118 @@
 
 # print(f"el total es:{total} ")
 
+# flag1=True
+# flag2=False
+# if flag1 and flag2:
+#     flag1,flag2= False, True
+# elif not flag2 and flag1:
+#     flag2,flag1=False,False
+#     if not flag1 and flag2:
+#         flag1,flag2=True,False
+#     elif not flag1 and not flag2:
+#         flag1,flag2=True,True
+
+# print(flag1, flag2)
+
+
+# num1=1
+# num2,num3=1, 1
+# num3=num3+1
+# if num1+num2==num3:
+#     print("igual")
+# else:
+#     print("diferente")
+
+
+# #calcular el puntaje de credito
+# #____ calcular que tanto credito tiene una persona
+# #en cierta entidad financiera, debera considerar
+# #cantidad de ingresos, nivel educacional y nacionailidad
+# #cantidad de ingresos
+# #500.000 a 1.000.000 : 300.000
+# #1.000.000 a 1.500.000 : 650.000
+# #1.500.000 o mas: 1.000.000
+# #Nivel educacional
+# #Basico: x1, medio:x1,3 , superior: x1,5
+# #Nacionalidad
+# #Chilena: +300.000, Extranjero: +0
+
+# credito=0
+# cingresos=0
+# niveledu="hola"
+# nacionalidad="hola"
+# cingresos=int(input("Ingrese la cantidad de ingresos: "))
+# niveledu=str(input("Ingrese su nivel educacional Basico, Medio, Superior:")).lower()
+# nacionalidad=str(input("Ingrese su nacionalidad: ")).lower()
+
+
+# if cingresos>=500000 and cingresos<=1000000:
+#     credito=credito+300000
+# elif cingresos>=1000000 and cingresos<=1500000:
+#     credito=credito+650000
+# elif cingresos>=1500000:
+#     credito=credito+1000000
+
+# if niveledu=="Medio".lower():
+#     credito=credito*1.3
+# elif niveledu=="Superior".lower():
+#     credito=credito*1.5
+
+# if nacionalidad=="Chilena".lower():
+#     credito=credito+300000
+
+# print("Su credito es: ", credito)
+
+
+# #pida al usuario 2 digitos verificando si el seguno sea mayor
+# # genere un nuemro aleatorio entre esos digitos 
+# # imprima la cantida de veecs el simbolo ▄ alt+220 
+
+# import random
+
+# num1=int(input("Ingrese el primer numero: "))
+# num2=int(input("Ingrese el segundo numero: "))
+
+# while num2<=num1:
+#     print("El segundo numero debe ser mayor al primero")
+#     num2=int(input("Ingrese el segundo numero: "))
+
+# cant=random.randint(num1,num2)
+# print("▄"*cant)
+
+#Crear un programa que pida la cantidad de ramos
+#Luego pida el promedio por cada materia 
+#Basados en su promedio final, aplicar puntaje de beneficios 
+#4.5 y 5: 300, 5.1 y 6.0: 500, 6.1 y 7: 800
+#Agregar puntaje segun carrera
+#Tecnico: +60, Ingenieria: +40, Diplomado: +20
+
+beneficios=0
+suma=0
+ramos=int(input("Ingrese la cantidad de ramos: "))
+for i in range(ramos):
+    print("Ingrese el promedio del ramo: ", i+1," ")
+    prom=int(input())
+    suma=suma+prom
+
+promfinal=suma/ramos
+
+if promfinal>=4.5 and promfinal<=5:
+    beneficios=beneficios+300
+elif promfinal>=5.1 and promfinal<=6.0:
+    beneficios=beneficios+500
+elif promfinal>=6.1 and promfinal <=7:
+    beneficios=beneficios+800
+
+carrera=str(input("Ingrese Carrera: Tecnico, Ingenieria, Diplomado: ")).lower()
+
+if carrera=="tecnico".lower():
+    beneficios=beneficios+60
+elif carrera=="ingenieria".lower():
+    beneficios=beneficios+40
+elif carrera=="diplomado".lower():
+    beneficios=beneficios+20
+
+print(f"Promedio: ", promfinal, "Beneficio: ", beneficios)
+
+
