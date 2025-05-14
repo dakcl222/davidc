@@ -73,48 +73,72 @@
 # #Se puede salir en cualquier momento
 # #Los montos de los productos son fijos
 
-total=0
-while True:
-    print(''' 
-    1.- Ingresar nombre del usuario
-    2.- Comprar
-    3.- Sacar boleta
-    4.- Salir
-    ''')
-    op=int(input())
-    match op:
-        case 1:
-            print("ingrese su nombre")
-            nombre=str(input())
-        case 2:
-            while True:
-                print(''' 
-            1.- hola1 500$
-            2.- hola2 1000$
-            3.- hola3 1500$
-            4.- Salir
-            ''')
-                op2=int(input())
-                match op2:
-                    case 1:
-                        total=total+500
-                        print("total neto: ", total)
-                    case 2:
-                        total=total+1000
-                        print("total neto: ", total)
-                    case 3:
-                        total=total+1500
-                        print("total neto: ", total)
-                    case 4:
-                        break
-                    case _ :
-                        print("invalido")
+# total=0
+# while True:
+#     print(''' 
+#     1.- Ingresar nombre del usuario
+#     2.- Comprar
+#     3.- Sacar boleta
+#     4.- Salir
+#     ''')
+#     op=int(input())
+#     match op:
+#         case 1:
+#             print("ingrese su nombre")
+#             nombre=str(input())
+#         case 2:
+#             while True:
+#                 print(''' 
+#             1.- hola1 500$
+#             2.- hola2 1000$
+#             3.- hola3 1500$
+#             4.- Salir
+#             ''')
+#                 op2=int(input())
+#                 match op2:
+#                     case 1:
+#                         total=total+500
+#                         print("total neto: ", total)
+#                     case 2:
+#                         total=total+1000
+#                         print("total neto: ", total)
+#                     case 3:
+#                         total=total+1500
+#                         print("total neto: ", total)
+#                     case 4:
+#                         break
+#                     case _ :
+#                         print("invalido")
 
-        case 3:
-            print(f"Hola {nombre}")
-            print("El total es: ", total)
-            print("El total+iva es: ", total*1.19)
-        case 4:
-            break
-        case _:
-            print("invalido")
+#         case 3:
+#             print(f"Hola {nombre}")
+#             print("El total es: ", total)
+#             print("El total+iva es: ", total*1.19)
+#         case 4:
+#             break
+#         case _:
+#             print("invalido")
+
+# #promedios por cantidad de alumnos 
+# # 1.- pedir cantidad de alumnos
+# #2.- pedir notas por cada alumno
+# #promediar a cada alumno
+# #y mostrar si aprueba o reprueba
+# #bonus, mostrar promedio de todos los alumnos
+# sumapromedios=0
+# sumapromedios=0
+# alumnos=int(input("Ingrese la cantidad de alumnos: "))
+# for i in range(alumnos):
+#     cnotas=int(input(f"ingrese la cantidad de notas del alumno {i+1}: "))
+#     suma=0
+#     for b in range(cnotas):
+#         notas=int(input(f"Ingrese la nota {b+1}: "))
+#         suma=suma+notas
+
+#     proalum=suma/cnotas
+#     sumapromedios+=proalum
+
+#     if proalum >=4.0:
+#         print("Aprobado")
+
+##juanjaras/juanj
