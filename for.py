@@ -139,3 +139,138 @@
 
 # print("El total neto es:", total)
 # print("El total mas IVA es: ", total*1.19)
+
+# #Perros de caza
+# #Pide al usuario la cantidad de perros
+# #Muestre cual es la cuota minima de conejos
+# #Luego consulte cuantos conejos trajo?
+# #Si el perro trajo la cantidad minima
+# # Cumplio la cuota, si no, se queda sin filete
+# #Mostrar resumen de perros que cumplieron y los que no
+
+# import random
+
+# sic=0
+# noc=0
+
+# crandom=random.randint(1,5)
+# while True:    
+#     try:
+#         cant=int(input("Ingrese el numero de perros:"))
+#         break
+#     except Exception:
+#         print("Solo se aceptan numeros enteros")
+
+# for i in range(cant):
+#     print("La cuota minima de conejos es ",crandom,".")
+#     print("Cuantos conejos trajo el perro numero",i+1,"?")
+#     nconejos=int(input())
+#     if nconejos<crandom:
+#         print("El perro no cumplio con la cuota, se quedo sin filete")
+#         noc=noc+1
+#     else:
+#         print("El perro cumplio con la cuota, se gana un filete")
+#         sic=sic+1
+        
+# print("Cantidad de perros que cumplieron: ", sic)
+# print("Cantidad de perros que no cumplieron: ", noc)
+
+# #Quiere pasar el ramo?
+# #Pregunte la cantidad de rojos en el curso
+# #los talleres que hay en el semestre son 4
+# #Por cada taller asistido obtiene 0.3 decimas
+# # si el alumno tiene mas de 1 punto
+# # tiene la bendicion del profesor
+# #si no, no se le puede ayudar
+# #ingrese la nota final y sume las decimas acumuladas.
+# #Muestre si aprueba o reprueba.
+
+# decimas=0
+# rojos=int(input("Ingrese la cantidad de rojos: "))
+# asiste=int(input("A cuantos talleres asistio?: "))
+# decimas=decimas+0.3*asiste
+# print("Usted tiene", decimas,"decimas")
+# if decimas>1:
+#     print("Tiene la bendicion del profesor")
+# else:
+#     print("No se le puede ayudar")
+
+# nfinal=float(input("Ingrese la nota final: "))
+# nfinal=nfinal+decimas
+
+# if nfinal>4.0:
+#     print("Aprueba")
+# else:
+#     print("Reprueba")
+
+
+#Lavado de autos
+#Crear un menu para lavar autos
+#1.- Cursar pago del lavado
+#2.- Ver ventas diarias.
+#3.- Salir
+#El lavado tiene 3 niveles
+#1.- Full $15000 2.- standard $10000 3.- basico $7000
+#Al mostrar las ventas diarias, debe mostrar la
+#Cantidad de autos que han ingresado y el monto total
+#Recaudado. tambien debe mostrar el monto mas alto pagado
+
+total=0
+cautos=0
+full=0
+standard=0
+basico=0
+
+while True:
+    print(''' 
+    1.- Cursar pago del lavado
+    2.- Ver ventas diarias
+    3.- Salir
+        ''')
+    op=int(input())
+    match op:
+        case 1:
+            print(''' 
+        1.- Full $15000
+        2.- Standard $10000
+        3.- Basico $7000 
+        4.- Salir         
+
+            ''')
+            op=int(input())
+            match op:
+                case 1:
+                    total=total+15000
+                    cautos=cautos+1
+                    full=10
+                case 2:
+                    total=total+10000
+                    cautos=cautos+1
+                    standard=5
+                case 3:
+                    total=total+7000
+                    cautos=cautos+1
+                    basico=1
+                case 4:
+                    break
+                case _ :
+                    print("invalido")
+                    
+        case 2:
+            print("Cantidad de autos: ", cautos)
+            print("Total recaudado: ", total)
+            if full>=1:
+                print("El monto mas alto pagado fue 15.000")
+            elif standard>full:
+                print("El monto mas alto pagado fue 10.000")
+            elif basico>standard and basico>full:
+                print("El monto mas alto pagado fue 7.000")
+        case 3:
+            break
+        case _ :
+            print("Invalido")
+
+
+
+
+
