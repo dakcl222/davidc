@@ -142,3 +142,8 @@
 #         print("Aprobado")
 
 ##juanjaras/juanj
+
+try:
+    xd=int(input())
+except Exception:
+    print("Solo se permiten numeros enteros")

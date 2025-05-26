@@ -116,3 +116,78 @@
 #         print("El numero ", i, " es par" )
 #     else:
 #         print("El numero ", i, " es impar" )
+
+deuda=100000
+
+while True:
+    print(''' 
+     1.- Pago de Tarjeta de Crédito
+     2.- Simulación de Compras
+     3.- Salir
+
+    ''')
+    while True:
+        try:
+            op=int(input())
+            break
+        except Exception:
+            print("Solo se permiten numeros enteros")
+    match op:
+        case 1:
+            while True:
+                print(''' 
+                1.- Ingresar un monto
+                2.- Salir
+                ''')
+                while True:
+                    try:
+                        op=int(input())
+                        break
+                    except Exception:
+                        print("Solo se permiten numeros enteros")
+                match op:
+                    case 1:
+                        monto=int(input("Ingrese un monto: "))
+                        while monto<0:
+                            print("El monto debe ser mayor o igual a cero")
+                            monto=int(input())
+                        while monto>deuda:
+                            print("El monto excede el saldo actual de la tarjeta")
+                            monto=int(input())
+                        deuda=deuda-monto
+                        print("La deuda actual es: ", deuda)
+                    case 2:
+                        break
+                    case _ :
+                        print("Opción invalida")
+
+        case 2:
+            while True:
+                print(''' 
+                1.- Ingresar monto
+                2.- Salir
+
+                ''')
+                while True:
+                    try:
+                        op=int(input())
+                        break
+                    except Exception:
+                        print("Solo se permiten numeros enteros")
+                match op:
+                    case 1:
+                        num=int(input("Ingrese el monto de la compra: "))
+                        while num<0:
+                            print("El monto debe ser mayor o igual a cero")
+                            num=int(input("ingrese el monto de la compra"))
+                        deuda=deuda+num
+                        print("Saldo de la tarjeta: ", deuda)
+                    case 2:
+                        break
+                    case _ :
+                        print("Opción invalida")
+                        
+        case 3:
+            break
+        case _ :
+            print("Opción invalida")
