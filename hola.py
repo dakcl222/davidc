@@ -117,77 +117,143 @@
 #     else:
 #         print("El numero ", i, " es impar" )
 
-deuda=100000
+# deuda=100000
+
+# while True:
+#     print(''' 
+#      1.- Pago de Tarjeta de Crédito
+#      2.- Simulación de Compras
+#      3.- Salir
+
+#     ''')
+#     while True:
+#         try:
+#             op=int(input())
+#             break
+#         except Exception:
+#             print("Solo se permiten numeros enteros")
+#     match op:
+#         case 1:
+#             while True:
+#                 print(''' 
+#                 1.- Ingresar un monto
+#                 2.- Salir
+#                 ''')
+#                 while True:
+#                     try:
+#                         op=int(input())
+#                         break
+#                     except Exception:
+#                         print("Solo se permiten numeros enteros")
+#                 match op:
+#                     case 1:
+#                         monto=int(input("Ingrese un monto: "))
+#                         while monto<0:
+#                             print("El monto debe ser mayor o igual a cero")
+#                             monto=int(input())
+#                         while monto>deuda:
+#                             print("El monto excede el saldo actual de la tarjeta")
+#                             monto=int(input())
+#                         deuda=deuda-monto
+#                         print("La deuda actual es: ", deuda)
+#                     case 2:
+#                         break
+#                     case _ :
+#                         print("Opción invalida")
+
+#         case 2:
+#             while True:
+#                 print(''' 
+#                 1.- Ingresar monto
+#                 2.- Salir
+
+#                 ''')
+#                 while True:
+#                     try:
+#                         op=int(input())
+#                         break
+#                     except Exception:
+#                         print("Solo se permiten numeros enteros")
+#                 match op:
+#                     case 1:
+#                         num=int(input("Ingrese el monto de la compra: "))
+#                         while num<0:
+#                             print("El monto debe ser mayor o igual a cero")
+#                             num=int(input("ingrese el monto de la compra"))
+#                         deuda=deuda+num
+#                         print("Saldo de la tarjeta: ", deuda)
+#                     case 2:
+#                         break
+#                     case _ :
+#                         print("Opción invalida")
+                        
+#         case 3:
+#             break
+#         case _ :
+#             print("Opción invalida")
+
+
+def menu2():
+    global num, correo
+    while True:
+                            op=int(input(''' 
+                        1.- Realizar llamada
+                        2.- Enviar correo electronico
+                        3.- Cerrar sesion 
+                        '''))
+                            match op:
+                                case 1:
+                                    num=int(input("Ingrese el numero: "))
+                                case 2:
+                                    correo=str(input("Ingrese el correo: "))
+                                case 3:
+                                    break
+                                case _:
+                                    print("Invalido")                                 
+                            
+usuario1=None
+usuario2=None
+usuario3=None
+contraseña1=None
+contraseña2=None
+contraseña3=None
 
 while True:
-    print(''' 
-     1.- Pago de Tarjeta de Crédito
-     2.- Simulación de Compras
-     3.- Salir
-
-    ''')
-    while True:
-        try:
-            op=int(input())
-            break
-        except Exception:
-            print("Solo se permiten numeros enteros")
+    op=int(input(''' 
+        1.- iniciar sesion
+        2.- registrar usuario
+        3.- salir
+            '''))
     match op:
         case 1:
-            while True:
-                print(''' 
-                1.- Ingresar un monto
-                2.- Salir
-                ''')
-                while True:
-                    try:
-                        op=int(input())
-                        break
-                    except Exception:
-                        print("Solo se permiten numeros enteros")
-                match op:
-                    case 1:
-                        monto=int(input("Ingrese un monto: "))
-                        while monto<0:
-                            print("El monto debe ser mayor o igual a cero")
-                            monto=int(input())
-                        while monto>deuda:
-                            print("El monto excede el saldo actual de la tarjeta")
-                            monto=int(input())
-                        deuda=deuda-monto
-                        print("La deuda actual es: ", deuda)
-                    case 2:
-                        break
-                    case _ :
-                        print("Opción invalida")
+            if usuario1==None:
+                print("No hay usuarios")
+            elif usuario1!=None:
+                usuario=str(input("Ingrese el usuario: "))
+                if usuario==usuario1:
+                    contraseña=str(input(f"Bienvenido, ingrese la contraseña: "))
+                    if contraseña!=contraseña1:
+                        print("Contraseña incorrecta")
+                    else:
+                        print("Bienvenido")
+                        menu2()
 
         case 2:
-            while True:
-                print(''' 
-                1.- Ingresar monto
-                2.- Salir
+            if usuario1==None:
+                usuario1=str(input("Ingrese el nombre de usuario: "))
+                contraseña1=str(input(f"Ingrese la contraseña de {usuario1}: "))
+            elif usuario1!=None and usuario2==None:
+                usuario2=str(input("Ingrese el nombre de usuario: "))
+                contraseña2=str(input(f"Ingrese la contraseña de {usuario2}: "))
+            elif usuario2!=None and usuario3==None:
+                usuario3=str(input("Ingrese el nombre de usuario: "))
+                contraseña3=str(input(f"Ingrese la contraseña de {usuario3}: "))
+            else:
+                print("No se pueden registrar mas usuarios")
 
-                ''')
-                while True:
-                    try:
-                        op=int(input())
-                        break
-                    except Exception:
-                        print("Solo se permiten numeros enteros")
-                match op:
-                    case 1:
-                        num=int(input("Ingrese el monto de la compra: "))
-                        while num<0:
-                            print("El monto debe ser mayor o igual a cero")
-                            num=int(input("ingrese el monto de la compra"))
-                        deuda=deuda+num
-                        print("Saldo de la tarjeta: ", deuda)
-                    case 2:
-                        break
-                    case _ :
-                        print("Opción invalida")
-                        
+
         case 3:
             break
-        case _ :
-            print("Opción invalida")
+        case 4:
+              print(num,correo)
+            
