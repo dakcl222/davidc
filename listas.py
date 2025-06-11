@@ -63,41 +63,105 @@
 #         case 4:
 #             break
 
-productos=[]
-precios=[]
-total=0
+# productos=[]
+# precios=[]
+# total=0
+# ##terminar
+# while True:
+#     print('''
+#         Selecciona una opción
+#     1. Agregar productos (Nombre producto y precio)
+#     2. Comprar (submenu mostrando productos y precios)
+#     3. Crear boleta
+#     4. Salir 
+#         ''')
+#     op=int(input())
+#     match op:
+#         case 1:
+#             producto=str(input("Ingrese el nombre del producto: "))
+#             productos.append(producto)
+#             precio=int(input("Ingrese el precio del producto: "))
+#             precios.append(precio)
 
+#         case 2:
+#             while True:
+#                 contador=0
+#                 print("Seleccione el producto: ")
+#                 for i in productos:
+#                     print(contador,".- ", productos[contador], precios[contador])
+#                     contador=contador+1
+#                 while True:
+#                     try:
+#                         op=int(input("Seleccione el producto: "))
+#                         print("Usted seleccionó el producto", productos[op])
+#                         total=total+precios[op]
+#                         print(total)
+#                         break
+#                     except IndexError:
+#                         print("No hay producto en ese espacio") 
+
+#         case 3:
+#             print("hola3")
+#         case 4:
+#             break
+#         case _:
+#             print("Opción invalida")
+
+notas=[]
+suma=0
+promedio=0
 while True:
     print('''
-        Selecciona una opción
-    1. Agregar productos (Nombre producto y precio)
-    2. Comprar (submenu mostrando productos y precios)
-    3. Crear boleta
-    4. Salir 
+    1.- Ingresar Nota
+    2.- Borrar nota
+    3.- Mostrar notas
+    4.- Sacar promedio, nota mayor y nota menor
+    5.- Limpiar todas las notas
+    6.- Salir
         ''')
     op=int(input())
     match op:
         case 1:
-            producto=str(input("Ingrese el nombre del producto: "))
-            productos.append(producto)
-            precio=int(input("Ingrese el precio del producto: "))
-            precios.append(precio)
-
+            nota=float(input("Ingrese una nota: "))
+            notas.append(nota)
+            print(f"Se ingreso la nota: {nota}")
         case 2:
             while True:
-                contador=0
-                print("Seleccione el producto: ")
-                for i in productos:
-                    print(productos[contador], precios[contador])
-                    contador=contador+1
-                op=str(input("Seleccione el producto: "))
-                if op in productos:
-                    print(f"Usted selecciono el Producto {op}")
-
+                try:
+                    op=int(input("Seleccione una nota a borrar: "))
+                    notas.remove(notas[op-1])
+                    break
+                except IndexError:
+                    print("No hay notas en ese espacio")
         case 3:
-            print("hola3")
+            contador=0
+            for i in notas:
+                print(contador+1, ".-",notas[contador])
+                contador=contador+1
         case 4:
+            contador=0
+            for i in notas:
+                suma=suma+notas[contador]
+                contador=contador+1
+            promedio=promedio+suma/contador
+            print("El promedio es: ", promedio)
+            print("La nota maxima fue: ", max(notas))
+            print("La nota minima fue: ", min(notas))
+        case 5:
+            notas.clear()
+        case 6:
             break
-        case _:
-            print("Opción invalida")
 
+###### append() Pone un elemento al final de la lista
+###### sum() suma todos los elementos de la lista
+###### max() muestra el elemento mayor
+###### min() muestra el elemento menor
+###### len() muestra el largo del objeto
+###### pop() elimina un elemento por el indice
+###### remove() elimina un elemento por el valor
+###### clear() limpia la lista completa
+###### insert() inserta un elemento en el indice indicado
+###### enumerate() enumera la lista con otro argumento
+###### extend() agrega varios elementos a la lista
+###### sort() ordena la lista de mayor a menor
+###### reverse() voltea la lista
